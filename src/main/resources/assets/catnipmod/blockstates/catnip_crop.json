@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "catnipmod:block/catnip_stage0" },
+    "age=1": { "model": "catnipmod:block/catnip_stage1" },
+    "age=2": { "model": "catnipmod:block/catnip_stage2" },
+    "age=3": { "model": "catnipmod:block/catnip_stage3" },
+    "age=4": { "model": "catnipmod:block/catnip_stage4" },
+    "age=5": { "model": "catnipmod:block/catnip_stage5" },
+    "age=6": { "model": "catnipmod:block/catnip_stage6" }
+  }
+}
