@@ -23,13 +23,6 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(CatnipMod.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(CatnipMod.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
-        return item;
-    }
-
     public static void registerModBlocks() {
         CatnipMod.LOGGER.debug("Registering ModBlocks for " + CatnipMod.MOD_ID);
     }
