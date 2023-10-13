@@ -1,8 +1,9 @@
 package net.opee.catnipmod.painting;
 
 import net.minecraft.entity.decoration.painting.PaintingVariant;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.opee.catnipmod.CatnipMod;
 
 public class ModPaintings {
@@ -11,7 +12,7 @@ public class ModPaintings {
     public static final PaintingVariant WANDERER = registerPainting("wanderer", new PaintingVariant(16, 32));
 
     private static PaintingVariant registerPainting(String name, PaintingVariant paintingVariant) {
-        return Registry.register(Registry.PAINTING_VARIANT, new Identifier(CatnipMod.MOD_ID, name), paintingVariant);
+        return Registry.register(Registries.PAINTING_VARIANT, new Identifier(CatnipMod.MOD_ID, name), paintingVariant);
     }
 
     public static void registerPaintings() {

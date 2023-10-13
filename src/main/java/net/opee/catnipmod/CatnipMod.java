@@ -2,6 +2,7 @@ package net.opee.catnipmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.opee.catnipmod.block.ModBlocks;
+import net.opee.catnipmod.item.ModItemGroup;
 import net.opee.catnipmod.item.ModItems;
 import net.opee.catnipmod.painting.ModPaintings;
 import net.opee.catnipmod.util.ModLootTableModifiers;
@@ -15,6 +16,7 @@ public class CatnipMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroup.registerItemGroup();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModPaintings.registerPaintings();

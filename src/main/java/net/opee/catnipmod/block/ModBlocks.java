@@ -1,10 +1,16 @@
 package net.opee.catnipmod.block;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.opee.catnipmod.CatnipMod;
 import net.opee.catnipmod.block.custom.CatnipCrop;
 
@@ -14,7 +20,14 @@ public class ModBlocks {
             new CatnipCrop(FabricBlockSettings.copy(Blocks.WHEAT)));
 
     private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(Registry.BLOCK, new Identifier(CatnipMod.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(CatnipMod.MOD_ID, name), block);
+    }
+
+    private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(CatnipMod.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+        return item;
     }
 
     public static void registerModBlocks() {
