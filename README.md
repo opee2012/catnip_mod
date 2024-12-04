@@ -1,3 +1,7 @@
+## Description
+
+This is a custom mod that adds catnip item and crop to work alongside the origins mod for the feline origin. This allows the feline to grow catnip which if eaten, grants strength for a limited time and 3 second dizziness. Used to negate the weak arms effect.
+
 ## Dependencies
 
 Fabric API:
