@@ -1,8 +1,14 @@
-# Fabric Example Mod
+## Dependencies
+
+Fabric API:
+https://fabricmc.net/
+
+Origins Mod:
+https://github.com/apace100/origins-fabric
 
 ## Setup
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Install in your launcher's mod folder.
 
 ## License
 
